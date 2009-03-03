@@ -1,1 +1,15 @@
-Run 4chandown.rb for usage information.
+Run 4chandown.rb with no arguments for usage information.
+
+Should run with no problems in 1.9.
+
+It'll start downloading as soon as it can, and will keep checking back for
+more. This means that it'll start downloading the first image before the
+thread HTML has been completely downloaded.
+
+Every 2 seconds it'll send a HEAD request to check for more updates,
+downloading any new images that have appeared.
+
+When the thread 404s, this will be reported along with the life time of the
+thread. The script will then exit.
+
+Currently, only 4chan /b/ is supported.
